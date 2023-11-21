@@ -8,6 +8,7 @@ For a sophisticated yet minimalist task management app, focusing on advanced fea
 
 - User registration and login.
 - Personalized task views based on user login.
+- Profile picture upload and crop.
 
 ### Task CRUD Operations
 
