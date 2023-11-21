@@ -1,8 +1,4 @@
-tsk-client:
-    ☐ Install Tailwind CSS
-    ☐ Configure Tailwind CSS
-    State management:
-        ☐ import Datetime Redux slice to store
-        ✔ Create user/settings page and features folder @done (19/11/2023, 12:52:37)
-        ✔ Wrap application in Redux provider @done (17/11/2023, 15:37:15)
-        ✔ Create Redux global store @done (17/11/2023, 15:34:05)
+TASKS:
+    ☐ Complete Passport integration (https://docs.nestjs.com/recipes/passport)
+        ☐ Implementing Passport local
+        ✔ auth module and users service @done (21/11/2023, 23:35:30)
