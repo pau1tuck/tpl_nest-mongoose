@@ -60,9 +60,11 @@ export class User extends Document {
 	@Prop()
 	country: string;
 
-	// Security and compliance
+	@Prop()
+	timeZone: string;
+
 	@Prop({ default: false })
-	verified: boolean;
+	isVerified: boolean;
 
 	@Prop({ default: false })
 	twoFactorEnabled: boolean;
@@ -74,10 +76,6 @@ export class User extends Document {
 	@Prop()
 	locale: string;
 
-	@Prop()
-	timeZone: string;
-
-	// Roles and permissions
 	@Prop({ type: [String], default: [] })
 	roles: string[];
 
