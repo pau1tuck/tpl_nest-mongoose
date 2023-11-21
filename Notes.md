@@ -24,9 +24,11 @@ For a sophisticated yet minimalist task management app, focusing on advanced fea
 - Search tasks by keywords.
 - Filter tasks by status, priority, due date, etc.
 
-### Recurring Tasks
+### Recurring Tasks / Routinery
 
 - Set up tasks that recur on a regular basis.
+
+### Shopping List
 
 ### Sub-tasks
 
