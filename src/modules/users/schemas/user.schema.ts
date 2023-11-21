@@ -1,5 +1,14 @@
-import { Prop, Schema, SchemaFactory } from "@nestjs/mongoose";
+import { Prop, raw, Schema, SchemaFactory } from "@nestjs/mongoose";
 import { HydratedDocument } from "mongoose";
+
+interface Address {
+	// addressLine1?: string;
+	// addressLine2?: string;
+	city?: string;
+	state?: string;
+	country?: string;
+	postalCode?: string;
+}
 
 export type UserDocument = HydratedDocument<User>;
 
@@ -42,26 +51,18 @@ export class User extends Document {
 	phoneNumber: string;
 
 	// Address fields (can also be a sub-document)
-	// @Prop()
-	// addressLine1: string;
 
-	// @Prop()
-	// addressLine2: string;
-
-	@Prop()
-	city: string;
-
-	@Prop()
-	state: string;
-
-	// @Prop()
-	// postalCode: string;
-
-	@Prop()
-	country: string;
-
-	@Prop()
-	timeZone: string;
+	@Prop(
+		raw({
+			// addressLine1: { type: String },
+			// addressLine2: { type: String },
+			city: { type: String },
+			state: { type: String },
+			country: { type: String },
+			postalCode: { type: String },
+		}),
+	)
+	address: Address;
 
 	@Prop({ default: false })
 	isVerified: boolean;
@@ -75,6 +76,9 @@ export class User extends Document {
 
 	@Prop()
 	locale: string;
+
+	@Prop()
+	timeZone: string;
 
 	@Prop({ type: [String], default: [] })
 	roles: string[];
